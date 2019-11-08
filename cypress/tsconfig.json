@@ -1,0 +1,6 @@
+{
+  "extends": "../tsconfig.json",
+  "typesRoot": "node-modules/@types",
+  "types": ["mocha"],
+  "include": ["integration/*.ts", "support/*.ts", "../node_modules/cypress"]
+}
