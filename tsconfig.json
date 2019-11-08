@@ -11,14 +11,13 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "typeRoots": ["node_modules/@types"],
     "types": ["mocha", "chai"],
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "lib": ["es2018", "dom"],
+    "paths": {
+      "@services/*": ["src/app/services/*"],
+      "@config": ["src/app/config"]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
