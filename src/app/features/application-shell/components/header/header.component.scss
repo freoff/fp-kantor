@@ -1,0 +1,4 @@
+@import 'variables';
+.header-toolbar {
+  @include three-column-middle-full();
+}

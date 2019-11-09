@@ -1,0 +1,36 @@
+<form (ngSubmit)="onFormSubmit()" [formGroup]="form">
+<mat-card>
+  <mat-card-header>
+    <mat-card-title translate>registration-form.title</mat-card-title>
+    <mat-card-subtitle translate>registration-form.subtitle</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="form d-flex flex-column">
+
+      <mat-form-field floatPlaceholder="auto">
+        <input data-cy-name matInput formControlName="name"
+               type="text"
+               required
+               placeholder="{{'registration-form.placeholders.name' | translate}}">
+      </mat-form-field>
+      <mat-form-field floatPlaceholder="auto">
+        <input data-cy-email matInput formControlName="email"
+               type="text"
+               required
+               placeholder="{{'registration-form.placeholders.email' | translate}}">
+      </mat-form-field>
+      <mat-form-field floatPlaceholder="auto">
+        <input data-cy-password matInput formControlName="password"
+               type="text"
+               required
+               placeholder="{{'registration-form.placeholders.password' | translate}}">
+      </mat-form-field>
+    </div>
+
+  </mat-card-content>
+  <mat-card-actions align="start">
+    <button mat-button type="submit" data-cy-registration-submit>registration-form.register</button>
+
+  </mat-card-actions>
+</mat-card>
+</form>

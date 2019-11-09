@@ -1,0 +1,20 @@
+
+<mat-drawer-container class="example-container" [hasBackdrop]="true" >
+  <mat-drawer #sideNav mode="side">
+    <ul>
+      <li>
+
+      </li>
+    </ul>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="shell-wrapper">
+      <fp-header [logged]="logged" (openSideNav)="sideNav.open()"></fp-header>
+      <div class="content">
+        <div class="router-wrapper">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

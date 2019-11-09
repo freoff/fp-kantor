@@ -11,14 +11,14 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$fp-kantor-primary: mat-palette($mat-indigo);
-$fp-kantor-accent: mat-palette($mat-pink, A200, A100, A400);
+$fp-kantor-primary: mat-palette($mat-blue, 500, 100, 700);
+$fp-kantor-accent: mat-palette($mat-grey, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $fp-kantor-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$fp-kantor-theme: mat-light-theme($fp-kantor-primary, $fp-kantor-accent, $fp-kantor-warn);
+$fp-kantor-theme: mat-dark-theme($fp-kantor-primary, $fp-kantor-accent, $fp-kantor-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -26,7 +26,8 @@ $fp-kantor-theme: mat-light-theme($fp-kantor-primary, $fp-kantor-accent, $fp-kan
 @include angular-material-theme($fp-kantor-theme);
 
 /* You can add global styles to this file, and also import other style files */
-
+@import './themes/variables';
+@import './themes/bootstrap';
 html,
 body {
   height: 100%;

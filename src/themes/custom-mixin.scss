@@ -1,0 +1,12 @@
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin three-column-middle-full() {
+  display: flex;
+  flex-flow: row;
+  :nth-child(2) {
+    flex: 1 1 auto;
+  }
+}

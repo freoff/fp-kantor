@@ -12,11 +12,12 @@
     "importHelpers": true,
     "target": "es2015",
     "typeRoots": ["node_modules/@types"],
-    "types": ["mocha", "chai"],
     "lib": ["es2018", "dom"],
     "paths": {
       "@services/*": ["src/app/services/*"],
-      "@config": ["src/app/config"]
+      "@config": ["src/app/config"],
+      "@mocks/*": ["src/mocks/*"],
+      "@routes": ["src/app/collections/application-routes.ts"]
     }
   },
   "angularCompilerOptions": {

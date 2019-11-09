@@ -1,0 +1,33 @@
+<mat-toolbar>
+  <div class="container">
+    <div class="header-toolbar">
+      <a routerLink="/" translate><img src="/assets/images/logo-long.png" alt="e-kantor"/></a>
+      <div class="spacer"></div>
+      <mat-icon class="d-inline-block d-md-none" (click)="openSideNav.emit()">menu</mat-icon>
+      <div class="menu d-none d-md-block" >
+        <section *ngIf="logged; else notLoggedTemplate">
+          User logged
+        </section>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
+<fp-header-image></fp-header-image>
+
+<ng-template #notLoggedTemplate>
+  <section class="d-flex">
+    <button
+      class="mr-3"
+      data-cy-register-button
+      mat-stroked-button
+      color="accent"
+      [routerLink]="routes.authorizationRegister"
+    >
+      {{ 'shell.register' | translate }}
+    </button>
+
+    <button class="mr-3" data-cy-login-button mat-button color="accent" [routerLink]="routes.authorizationLogin">
+      {{ 'shell.login' | translate }}
+    </button>
+  </section>
+</ng-template>
